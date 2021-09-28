@@ -64,13 +64,26 @@ The notebook itself is divided into several parts:
 This choice was motivated by the difference between the objects on which AlexNet was trained and the objects that we want to classify. For M3 fusion, we had the same approach because we only recovered a part of the recovered only a part of the model;
 - The state of the art and the design of the database meant that we preferred to train the network from scratch.
 
-The code is connected to Comet for hyper-parameters optimization. 
+The notebook is linked to Comet for hyper-parameters optimization. 
 
 ### Classification ###
-
-
+The principle is simple: it is to make a prediction on a patch of size 50x50 pixels for M3 fusion. 
+This patch browse the input image and predict a class. This class will then be reported in a classification matrix. For each patch,
+we classify the central pixel.
+To counter the edge effects and classify the pixels at the edge of the image, we add a padding. The padding chosen is the padding "mirror" size 25x25. This will reflect the values at the edge. To illustrate what padding is, here is an example:
+ 
+Let's take the matrix A = [1, 2, 3, 4, 5].
+ A padding of size 2 will give : A'= [3, 2, 1, 2, 3, 4, 5, 4, 3]
+The classification matrix is the same size as the input satellite image.
+![Sliding window mechanism](https://upload.wikimedia.org/wikipedia/commons/0/06/Convolution_arithmetic_-_Full_padding_no_strides.gif)
 
 ### Results ###
+![Results](results.png)
+
+Figure a is mostly composed of sugarcane.
+The classification produced by the TETIS unit (figure b) is an object-oriented classification. We observe mainly sugar cane and the edge of the crops represented by the class "heath and savanna".
+While the classification produced in the framework of this training course (figure 15.c) is a pixel approach. This classification is obtained with the methodology described above, in addition to the application of a sieve filter.
+We observe that on figure c there are several objects. We can discern mainly sugar cane, market gardening and pasture. This classification is more accurate overall because each pixel is assigned a class, but it performs less well because the edges of the fields are assigned the class: "Maraichage".
 
 ### Bibliography ###
 Anon. s. d. « Planet: Understanding the Amazon from Space | Kaggle ». Consulté 5 août 2021a (https://www.kaggle.com/c/planet-understanding-the-amazon-from-space/overview).
