@@ -1,7 +1,7 @@
-### Classify_Pleiades_DeepLearning ###
+# Classify_Pleiades_DeepLearning #
 *Repository with code from a 5 months internship.* 
 
-# Context #
+### Context ###
 This internship is part of the PostDoc project led by Christophe Lin-Kwong-Chon :"DEEP LEARNING FOR REUNION ENERGY AUTONOMY" (DEEPRUN). 
 This project, in partnership with the University of Reunion and the CIRAD, is about the optimization of the production potential of renewable energies in Reunion Island: photovoltaic and biomass.
 To do this, the project is based on both satellite images (identification of biomass sources) and reversible fuel cell images acquired by a high-speed camera (energy storage via the hydrogen vector). To summarize, these are techniques for determining certain characteristics of observed points from remote measurements. In this project, one of the aspects is related to my internship subject. It consists in exploiting satellite images, classifying them, and producing a map of
@@ -22,11 +22,13 @@ The steps of this internship are:
 - To propose a method for implementing some of the most promising algorithms; -To build the learning base;
 - Evaluate the performance of these algorithms on test areas.
 
-# What we wish to achieve #
+### What we wish to achieve ###
 Currently, land cover maps are based on satellite image processing techniques using remote sensing expertise and classifiers. This is the case for the Moringa chain (Dupuy et al., 2019). The methodology consists of using a very high resolution image (VHRS) as well as high resolution time series (HSR) in an approach combining object classification and the Random Forest algorithm (Dupuy, 2019; Leo Breiman, 2001).
 ![Land use map 2018 Pleiades-0.5m ( Stéphane Dupuy, 2018)](level3.png)
+![Lengend](legend.png)
 
-# Bibliography #
+
+### Bibliography ###
 Anon. s. d. « Planet: Understanding the Amazon from Space | Kaggle ». Consulté 5 août 2021a (https://www.kaggle.com/c/planet-understanding-the-amazon-from-space/overview).
 \
 Basu, Saikat, Sangram Ganguly, Supratik Mukhopadhyay, Robert DiBiano, Manohar Karki, et Ramakrishna Nemani. 2015. « DeepSat: A Learning Framework for Satellite Imagery ». Proceedings of the 23rd SIGSPATIAL International Conference on Advances in Geographic Information Systems 1-10. doi: 10.1145/2820783.2820816.
